@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelTip</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+  </head>
+
+  <body>
+      <div class="wrapper">
+        <header>
+            <h1 class="header">TravelTip</h1>
+            <div class="search-container">
+              <input type="text" class="input-search" placeholder="Enter Location" />
+              <button onclick="onGetLocs()" class="search-btn btn">Go</button>
+              <button onclick="onGetUserPos()" class="my-loc-btn btn">My Location</button>
+            </div>
+          </header>
+          <section class="curr-loc-container">
+            <h1>Location: <span class="curr-loc"></span></h1>
+            <!-- <div class="copy-link-container">
+                <input type="text" class="link-url">
+                <button onclick="onGetLink()" class="copy-link-btn btn">Copy Link</button>
+            </div> -->
+          </section>
+          <main class="main-container">
+              <aside class="info-container">
+                  <div class="weather-container"></div>
+                  <div><ul class="loc-container"></ul></div>
+                </aside>
+            <section class="map-container">
+              <div id="map"></div>
+              <!-- style="width: 50%; height: 400px" -->
+            </section>
+          </main>
+          <div class="copy-link-container">
+            <input type="text" class="link-url">
+            <button onclick="onGetLink()" class="copy-link-btn btn">Copy Link</button>
+        </div>
+      </div>
+  
+
+    <script src="js/lib/axios.js"></script>
+    <script type="module" src="js/app.controller.js"></script>
+  </body>
+</html>
